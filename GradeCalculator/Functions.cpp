@@ -1,4 +1,5 @@
-# include "Functions.h";
+﻿# include "Functions.h";
+
 
 vector<int> randomGrades(int n) {
     using rClock = std::chrono::high_resolution_clock;

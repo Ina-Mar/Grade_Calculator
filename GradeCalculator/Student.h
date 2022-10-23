@@ -1,6 +1,7 @@
 #pragma once
 #include "Libraries.h"
 
+//Programos versija su vektoriumi.
 class Student
 {
 	string name, last_name;

@@ -1,6 +1,7 @@
 #pragma once
 #include "Libraries.h"
 
+//Programos versija su dinaminiu masyvu.
 class StudentA
 {
 	string name, last_name;
