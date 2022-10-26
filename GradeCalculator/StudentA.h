@@ -8,8 +8,10 @@ class StudentA
 	static char choose;
 	int* hw;
 	int exam;
-	int s = 1000;
+	int s = 500;
 	float final() const;
+	
+	//Metodas, kuris sutraukia masyva iki aktualaus dydzio
 	void arraySize();
 
 public:

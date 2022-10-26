@@ -7,41 +7,50 @@
 
 int main()
 {
-    vector<int> tryit;
-    vector<int> tryit2;
-    int n = 10;
-    tryit = randomGrades(10);
-    tryit2 = randomGrades(10);
+    char input;
+    char a;
+    vector<Student> stud;
+    cout << "Pasirinkite duomenu ivedima is konsoles(C) arba is failo(F)" << endl;
+    cin >> input;
+    cout << "Pasirinkite pazymio skaiciavima pagal vidurki(V) arba pagal mediana(M)" << endl;
+    cin >> a;
+    if ((a == 'V' || a == 'v' || a == 'M' || a == 'm')) {
+        Student::setCountingMethod(a);
+    }
+    else {
+        cout << "Neteisingai nurodytas skaiciavimo metodas." << endl;
+        cout << "Skaiciuojama bus pagal vidurki." << endl;
+        a = 'v';
+    }
+    if (input == 'C' || input == 'c') {
+        stud = consoleInput();
+    }
+    else if (input == 'F' || input == 'f') {
+        string f_name;
+        cout << "Iveskite failo varda: " << endl;;
+        cin >> f_name;
+        stud = fileInput(f_name);
+        
+    }
+    else {
+        cout << "Neteisingai nurodytas ivesties metodas." << endl;
 
-    for (int i = 0; i < tryit.size(); i++) {
-        cout << tryit[i] << endl;
-        cout << tryit2[i] << endl;
     }
 
-    /*char a;
-    printf("Pasirinkite pazymio skaiciavima pagal vidurki(V) arba pagal mediana(M)\n");
-    scanf_s("%c", &a, 1);
-    //StudentA::setCountingMethod(a);
-    Student::setCountingMethod(a);
-
-    //StudentA st1;
-    //tudentA st2;
-    Student st3;
-
-    cin >> st3;
-    //cin >> st2;
     if ((a == 'v') || (a == 'V')) {
         cout << setw(15) << left << "Pavarde" << setw(15) << left << "Vardas" << setw(15) << left << "Galutinis(Vid.)" << endl;
     }
     else if ((a == 'm') || (a == 'M')) {
         cout << setw(15) << left << "Pavarde" << setw(15) << left << "Vardas" << setw(15) << left << "Galutinis(Med.)" << endl;
     }
+   
 
+    
+    for (int i = 0; i < stud.size(); i++) {
+        cout << stud[i] << endl;
+    }
 
-    cout << "-------------------------------------------------" << endl;
-    cout << st3 << endl;
-    //cout << st1 << endl;
-    */
+    
 }
 
 

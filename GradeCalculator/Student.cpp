@@ -64,7 +64,7 @@ void Student::setCountingMethod(char a) {
 
 }
 ostream& operator<<(ostream& output, const  Student& st) {
-	output << setw(15) << left << st.name << setw(15) << left << st.last_name << setw(15) << left << fixed
+	output << setw(15) << left << st.last_name << setw(15) << left << st.name << setw(15) << left << fixed
 		<< setprecision(2) << st.final();
 	return output;
 
@@ -72,18 +72,27 @@ ostream& operator<<(ostream& output, const  Student& st) {
 }
 istream& operator>>(istream& input, Student& st) {
 	int grade;
-	int term = -1;
-	printf("Iveskite studento varda ir pavarde\n");
+	int last_num;
 	input >> st.name >> st.last_name;
-	printf("iveskite studento pazymius. Baikite ivedima ivesdami -1\n");
-
-	while ((input >> grade) && grade != term) {
+	
+	while (input >> grade && grade != 0) {
+        while (grade < 0 || grade > 10) {
+			input.clear();
+			input.ignore(numeric_limits<streamsize>::max(), ' ');
+			break;
+		}
 		st.hw.push_back(grade);
+		
+		
 	}
-	printf("Iveskite egzamino rezultata\n");
-	input >> st.exam;
-	//last_num = st.hw.size() - 1;
-	//st.exam = st.hw[last_num];
-	//st.hw.pop_back();
+	
+	last_num = st.hw.size() - 1;
+	st.exam = st.hw[last_num];
+	st.hw.pop_back();
 	return input;
+}
+
+bool Student::operator<(const Student& other) {
+	return last_name < other.last_name;
+
 }

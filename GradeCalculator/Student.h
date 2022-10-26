@@ -18,6 +18,7 @@ public:
 	friend ostream& operator<<(ostream& output, const Student& st);
 	friend istream& operator>>(istream& input, Student& st);
 	static void setCountingMethod(char);
+	bool operator<(const Student& other);
 
 };
 

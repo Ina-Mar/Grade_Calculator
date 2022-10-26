@@ -4,8 +4,8 @@ char StudentA::choose = 'V';
 StudentA::StudentA() {
 	name = "";
 	last_name = "";
-	hw = new int[1000];
-	for (int i = 0; i < 1000; i++) {
+	hw = new int[s];
+	for (int i = 0; i < s; i++) {
 		hw[i] = 0;
 	}
 	exam = 0;
