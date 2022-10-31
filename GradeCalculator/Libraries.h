@@ -26,6 +26,7 @@ using std::setprecision;
 using std::endl;
 using std::setw;
 using std::left;
+using std::right;
 using std::sort;
 
 using std::uniform_int_distribution;
@@ -33,13 +34,17 @@ using std::chrono::high_resolution_clock;
 using std::mt19937;
 
 using std::ifstream;
+using std::ofstream;
 using std::getline;
 using std::istringstream;
+using std::stringstream;
+using std::to_string;
+
 
 using std::exception;
 using std::streamsize;
 using std::numeric_limits;
-
+using std::lower_bound;
 
 
 

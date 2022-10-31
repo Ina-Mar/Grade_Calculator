@@ -130,13 +130,11 @@
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="GradeCalculator.cpp" />
     <ClCompile Include="Student.cpp" />
-    <ClCompile Include="StudentA.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Libraries.h" />
     <ClInclude Include="Student.h" />
-    <ClInclude Include="StudentA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
