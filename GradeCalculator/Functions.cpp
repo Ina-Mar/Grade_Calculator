@@ -127,16 +127,7 @@ void inputProgram() {
 }
 
 
-Student generateRandomStudent(string name, string last, int grade_num) {
-    vector<int> grades;
-    int exam_grade;
-    grades = randomGrades(grade_num + 1);
-    exam_grade = grades[grades.size() - 1];
-    grades.pop_back();
-    Student st(name, last, grades, exam_grade);
-    return st;
 
-}
 
 
 void randomFileOutput(int num_entries, int num_grades, string file_name) {
