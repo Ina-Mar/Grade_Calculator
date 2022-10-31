@@ -8,7 +8,9 @@ class Student
 	static char choose;
 	vector<int> hw;
 	int exam;
+	//float final_grade;
 	float final() const;
+	//void setFinal() const;
 public:
 	Student();
 	Student(string, string, vector<int>, int);
@@ -19,6 +21,8 @@ public:
 	friend istream& operator>>(istream& input, Student& st);
 	static void setCountingMethod(char);
 	bool operator<(const Student& other);
+	//bool operator>(const Student& other);
+	float getFinal() const;
 
 };
 
