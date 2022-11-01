@@ -40,7 +40,5 @@
     <Text Include="student1000.txt" />
     <Text Include="student10000.txt" />
     <Text Include="student100000.txt" />
-    <Text Include="student1000000.txt" />
-    <Text Include="student10000000.txt" />
   </ItemGroup>
 </Project>

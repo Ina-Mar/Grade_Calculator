@@ -1,6 +1,5 @@
 #include "Student.h"
 #include "libraries.h"
-#include "StudentA.h"
 #include "Functions.h"
 
 
