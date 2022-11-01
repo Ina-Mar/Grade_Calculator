@@ -5,6 +5,7 @@ Student::Student() {
 	name = "";
 	last_name = "";
 	exam = 0;
+	//final_grade = 0;
 
 }
 Student::Student(string name, string last_name, vector<int> hw, int exam) {
@@ -14,7 +15,7 @@ Student::Student(string name, string last_name, vector<int> hw, int exam) {
 	this->exam = exam;
 }
 Student::~Student() {
-
+	hw.clear();
 }
 Student::Student(const Student& original) {
 	name = original.name;
@@ -56,16 +57,17 @@ float Student::final() const {
 		}
 		fin = sum * 0.4 + exam * 0.6;
 	}
-
+	
 	return fin;
 }
 void Student::setCountingMethod(char a) {
 	choose = a;
 
 }
-ostream& operator<<(ostream& output, const  Student& st) {
+ostream& operator<<(ostream& output,  const Student& st) {
+	
 	output << setw(15) << left << st.last_name << setw(15) << left << st.name << setw(15) << left << fixed
-		<< setprecision(2) << st.final();
+		<< setprecision(2) << st.getFinal();
 	return output;
 
 
@@ -73,19 +75,19 @@ ostream& operator<<(ostream& output, const  Student& st) {
 istream& operator>>(istream& input, Student& st) {
 	int grade;
 	int last_num;
-	input >> st.name >> st.last_name;
-	
+	input >> st.last_name >> st.name;
+
 	while (input >> grade && grade != 0) {
-        while (grade < 0 || grade > 10) {
+		while (grade < 0 || grade > 10) {
 			input.clear();
 			input.ignore(numeric_limits<streamsize>::max(), ' ');
 			break;
 		}
 		st.hw.push_back(grade);
-		
-		
+
+
 	}
-	
+
 	last_num = st.hw.size() - 1;
 	st.exam = st.hw[last_num];
 	st.hw.pop_back();
@@ -93,6 +95,11 @@ istream& operator>>(istream& input, Student& st) {
 }
 
 bool Student::operator<(const Student& other) {
-	return last_name < other.last_name;
+	return getFinal() < other.getFinal();
 
+}
+
+float Student::getFinal() const {
+	float fin = final();
+	return fin;
 }

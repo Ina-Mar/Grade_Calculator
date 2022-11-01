@@ -9,6 +9,7 @@ class Student
 	vector<int> hw;
 	int exam;
 	float final() const;
+	
 public:
 	Student();
 	Student(string, string, vector<int>, int);
@@ -19,6 +20,7 @@ public:
 	friend istream& operator>>(istream& input, Student& st);
 	static void setCountingMethod(char);
 	bool operator<(const Student& other);
-
+	float getFinal() const;
+	
 };
 
