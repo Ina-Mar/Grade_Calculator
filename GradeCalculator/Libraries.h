@@ -12,6 +12,9 @@
 #include <fstream>
 #include <stdexcept>
 #include <limits>
+#include <list>
+#include <deque>
+
 
 
 
@@ -44,7 +47,10 @@ using std::to_string;
 using std::exception;
 using std::streamsize;
 using std::numeric_limits;
-using std::lower_bound;
+using std::allocator;
+using std::list;
+using std::deque;
+
 
 
 

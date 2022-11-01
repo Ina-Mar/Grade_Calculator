@@ -15,7 +15,7 @@ Student::Student(string name, string last_name, vector<int> hw, int exam) {
 	this->exam = exam;
 }
 Student::~Student() {
-
+	hw.clear();
 }
 Student::Student(const Student& original) {
 	name = original.name;
@@ -98,11 +98,7 @@ bool Student::operator<(const Student& other) {
 	return getFinal() < other.getFinal();
 
 }
-/*
-bool Student::operator>(const Student& other) {
-	return getFinal() < other.getFinal();
-}
-*/
+
 float Student::getFinal() const {
 	float fin = final();
 	return fin;

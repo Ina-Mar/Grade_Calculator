@@ -136,6 +136,13 @@
     <ClInclude Include="Libraries.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="student1000.txt" />
+    <Text Include="student10000.txt" />
+    <Text Include="student100000.txt" />
+    <Text Include="student1000000.txt" />
+    <Text Include="student10000000.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
