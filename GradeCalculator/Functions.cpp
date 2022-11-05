@@ -456,3 +456,72 @@ void testProgramContainers(int num_lines, string file_name) {
 
 
 }
+
+vector<vector<Student>> sortStudentsByGrade2(vector<Student> students) {
+    // pazangiu studentu vektorius
+    vector<Student> tailors;
+
+    //prastu studentu vektorius
+    vector<Student> tinkers;
+
+    vector<vector<Student>> all_students;
+    for (int i = 0; i < students.size(); i++) {
+        if (students[i].getFinal() >= 5) {
+            tailors.push_back(students[i]);
+          
+        }
+        else {
+            tinkers.push_back(students[i]);
+        }
+    }
+    all_students.push_back(tailors);
+    all_students.push_back(tinkers);
+    students.clear();
+    return all_students;
+}
+
+vector<list<Student>> sortStudentsByGradeList2(list<Student> students) {
+    //pazangiu studentu sarasas
+    list<Student> tailors;
+    //prastu studentu sarasas
+    list<Student> tinkers;
+    vector<list<Student>> all_students;
+    list<Student>::iterator iter;
+    //iter = students.begin();
+    for (iter = students.begin(); iter != students.end(); ++iter) {
+        if (iter->getFinal() < 5) {
+            tinkers.push_back(*iter);
+            //iter++;
+            //students.pop_front();
+
+        }
+        else {
+            tailors.push_back(*iter);
+        }
+    }
+
+    all_students.push_back(tailors);
+    all_students.push_back(tinkers);
+    students.clear();
+    return all_students;
+}
+
+vector<deque<Student>> sortStudentsByGradeDeque2(deque<Student> students) {
+    //pazangiu studentu deque
+    deque<Student> tailors;
+    //prastu studentu deque
+    deque<Student> tinkers;
+    vector<deque<Student>> all_students;
+    for (int i = 0; i < students.size(); i++) {
+        if (students[i].getFinal() >= 5) {
+            tailors.push_back(students[i]);
+        }
+        else {
+            tinkers.push_back(students[i]);
+        }
+    }
+    all_students.push_back(tailors);
+    all_students.push_back(tinkers);
+    students.clear();
+    return all_students;
+}

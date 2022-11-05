@@ -31,31 +31,41 @@ void writeSortedStudents(vector<vector<Student>>, string, string);
 //Testavimo programa skirtingo dydzio failams.
 void testProgram(int);
 
-//Funkcija ivesciai is failo list versija.
+//Funkcija ivesciai is failo, list versija.
 list<Student> fileInputList(string);
 
-//Atlieka surusiavima pagal nustatyta faktoriu list versija.
+//Atlieka surusiavima pagal nustatyta faktoriu, list versija.
 list<Student> sortList(list<Student>);
 
 
-//surusiuoja studentus i dvi kategorijas list versija.
+//surusiuoja studentus i dvi kategorijas, list versija.
 vector<list<Student>> sortStudentsByGradeList(list<Student>);
  
-//iraso surusiuotus duomenis i du failus list versija.
+//iraso surusiuotus duomenis i du failus, list versija.
 void writeSortedStudentsList(vector<list<Student>>, string, string);
 
-//Funkcija ivesciai is failo deque versija.
+//Funkcija ivesciai is failo, deque versija.
 deque<Student> fileInputDeque(string);
 
-//Atlieka surusiavima pagal nustatyta faktoriu deque versija.
+//Atlieka surusiavima pagal nustatyta faktoriu, deque versija.
 deque<Student> sortDeque(deque<Student>);
 
 
-//surusiuoja studentus i dvi kategorijas deque versija.
+//surusiuoja studentus i dvi kategorijas, deque versija.
 vector<deque<Student>> sortStudentsByGradeDeque(deque<Student>);
 
-//iraso surusiuotus duomenis i du failus deque versija.
+//iraso surusiuotus duomenis i du failus, deque versija.
 void writeSortedStudentsDeque(vector<deque<Student>>, string, string);
 
 //Testavimo funkcija skirtingiems konteineriams.
 void testProgramContainers(int, string);
+
+//Rusiavimo versija vektoriui sukuriant du naujus konteinerius
+vector<vector<Student>> sortStudentsByGrade2(vector<Student>);
+
+
+//Rusiavimo versija sarasui sukuriant du naujus konteinerius
+vector<list<Student>> sortStudentsByGradeList2(list<Student>);
+
+//Rusiavimo versija deque sukuriant du naujus konteinerius
+vector<deque<Student>> sortStudentsByGradeDeque2(deque<Student>);
