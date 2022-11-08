@@ -75,7 +75,7 @@ ostream& operator<<(ostream& output,  const Student& st) {
 istream& operator>>(istream& input, Student& st) {
 	int grade;
 	int last_num;
-	input >> st.last_name >> st.name;
+	input >> st.name >> st.last_name;
 
 	while (input >> grade && grade != 0) {
 		while (grade < 0 || grade > 10) {
@@ -95,7 +95,7 @@ istream& operator>>(istream& input, Student& st) {
 }
 
 bool Student::operator<(const Student& other) {
-	return getFinal() < other.getFinal();
+	return last_name < other.last_name;
 
 }
 
