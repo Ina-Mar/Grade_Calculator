@@ -34,6 +34,7 @@ using std::sort;
 
 using std::uniform_int_distribution;
 using std::chrono::high_resolution_clock;
+using std::chrono::duration;
 using std::mt19937;
 
 using std::ifstream;
@@ -50,6 +51,10 @@ using std::numeric_limits;
 using std::allocator;
 using std::list;
 using std::deque;
+using std::partition_copy;
+using std::count_if;
+
+
 
 
 

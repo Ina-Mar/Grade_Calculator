@@ -2,6 +2,8 @@
 
 #include "Libraries.h"
 #include "Student.h"
+#include "AdditionalFunctions.h"
+
 
 //Sukuria vektorių iš atsitiktinai sugeneruotų sveikųjų skaičių.
 vector<int> randomGrades(int n);
@@ -18,44 +20,17 @@ vector<Student> sortVector(vector<Student>);
 //Ivesties is failo arba dokumento funkcija.
 void inputProgram();
 
-
-//Sukuria norimo dydzio dokumenta su atsitiktinai generuotu studentu sarasu.
-void randomFileOutput(int, int, string);
-
-//surusiuoja studentus i dvi kategorijas.
-vector<vector<Student>> sortStudentsByGrade(vector<Student>);
-
 //iraso surusiuotus duomenis i du failus.
 void writeSortedStudents(vector<vector<Student>>, string, string);
 
-//Testavimo programa skirtingo dydzio failams.
-void testProgram(int);
+//Rusiavimo versija vektoriui sukuriant du naujus konteinerius
+vector<vector<Student>> sortStudentsByGrade2(vector<Student>);
 
-//Funkcija ivesciai is failo list versija.
-list<Student> fileInputList(string);
+//Duomenu isvedimo i konsole funkcija
+void consoleOutput(char, vector<Student>);
 
-//Atlieka surusiavima pagal nustatyta faktoriu list versija.
-list<Student> sortList(list<Student>);
+//Duomenu isvedimo i failus funkcija
+void fileOutput(vector<Student>, char);
 
-
-//surusiuoja studentus i dvi kategorijas list versija.
-vector<list<Student>> sortStudentsByGradeList(list<Student>);
- 
-//iraso surusiuotus duomenis i du failus list versija.
-void writeSortedStudentsList(vector<list<Student>>, string, string);
-
-//Funkcija ivesciai is failo deque versija.
-deque<Student> fileInputDeque(string);
-
-//Atlieka surusiavima pagal nustatyta faktoriu deque versija.
-deque<Student> sortDeque(deque<Student>);
-
-
-//surusiuoja studentus i dvi kategorijas deque versija.
-vector<deque<Student>> sortStudentsByGradeDeque(deque<Student>);
-
-//iraso surusiuotus duomenis i du failus deque versija.
-void writeSortedStudentsDeque(vector<deque<Student>>, string, string);
-
-//Testavimo funkcija skirtingiems konteineriams.
-void testProgramContainers(int, string);
+//Versija inputProgram() funkcijai
+void writeSortedStudents2(vector<vector<Student>>, string, string, char);
