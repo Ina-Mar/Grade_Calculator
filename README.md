@@ -1,5 +1,5 @@
 # Grade_Calculator
-Studentų galutinio pazymio skaičiuoklė
+Studentų galutinio pazymio skaičiuoklė.
 Programa apskaičiuoja galutinį pažymį pagal nustatytą formulę ir atspausdina rezaultatus konsolės lange arba išveda į tekstinius failus.
 Programos naudojimas.
 Programa turi Setup failą, kurį galima naudoti jos įdiegimui į Windows sistemą. Paleidus Setup.exe failą, pradedamas programos diegimas. Dialogo lange reikia pasirinkti vietą, į kurią bus įdiegta programa. Užbaigus diegimą, darbastalyje ir programų sąraše atsiras nuorodos į programą GradeCalculator. Paleidus šią programą, atsidaro konsolės langas, kuriame naudotojo prašoma pasirinkti duomenų įvedimą iš konsolės arba iš failo. Pasirinkimas šiuo ir visais kitais atvejais daromas įvedant atitinkamą raidę. Toliau prašoma pasirinkti galutinio pažymio skaičiavimą pagal vidurkį arba pagal medianą. 
